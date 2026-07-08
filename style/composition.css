@@ -1,0 +1,17 @@
+.composition {
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.composition__title {
+  margin-bottom: 5px;
+}
+
+.composition__list li {
+  margin-bottom: 5px;
+}
+
+.composition__list li:first-child {
+  margin-top: 5px;
+}
