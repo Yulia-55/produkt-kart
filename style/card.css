@@ -23,16 +23,17 @@
 
 .card__name {
   font-weight: 700;
-  line-height: 27px;
-  color: #515076;
+  line-height: 27px;  
   margin: 0;
   padding-bottom: 5px;
+  font-size: 20px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
 .card__description {
   font-size: 13px;
-  line-height: 18px;
-  color: #515076;  
+  line-height: 18px;  
 }
 
 .card__description p:first-child {
@@ -53,8 +54,7 @@
   justify-content: space-between;
   font-size: 20px;
   font-weight: 700;
-  line-height: 24px;
-  color: #515076;
+  line-height: 24px;  
 }
 
 .card__price span {  

@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Card</title>  
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/buttons.css">
   <link rel="stylesheet" href="style/clear-list.css">
   <link rel="stylesheet" href="style/catalog.css">
   <link rel="stylesheet" href="style/composition.css">
@@ -17,10 +18,17 @@
 <body>
   <main class="catalog">
     <div class="catalog__container container">
+      <div class="buttons">
+        <button id="change-color-all-cards" class="buttons__button">Изменить цвет всех карточек</button>
+        <button id="change-color-firstcard" class="buttons__button">Изменить цвет первой карточки</button>
+        <button id="open-google" class="buttons__button">Открыть Google</button>
+        <button id="outputConsoleLog" class="buttons__button">Вывести в консоль</button>
+        <button id="change-color-background-button" class="buttons__button">Изменить цвет фона</button>
+      </div>
       <h1 class="catalog__title title">Выбери свой продукт</h1>
       <ul class="products clear-list">
         <li class="products__item card">
-          <img src="img/photo 1 (1).png" alt="Product 1" class="card__image" />
+          <img src="img/photo_1.png" alt="Product 1" class="card__image" />
           <span class="card__remark">для нормальной кожи</span>
           <h2 class="card__name">Увлажняющий мусс</h2>
           <div class="card__description">
@@ -40,7 +48,7 @@
           </div>
         </li>
         <li class="products__item card">
-          <img src="img/photo 2.png" alt="Product 2" class="card__image" />
+          <img src="img/photo_2.png" alt="Product 2" class="card__image" />
           <span class="card__remark">для нормальной кожи</span>
           <h2 class="card__name">Увлажняющая маска</h2>
           <div class="card__description">
@@ -60,7 +68,7 @@
           </div>
         </li>
         <li class="products__item card">
-          <img src="img/photo 3.png" alt="Product 3" class="card__image" />
+          <img src="img/photo_3.png" alt="Product 3" class="card__image" />
           <span class="card__remark">для нормальной кожи</span>
           <h2 class="card__name">Гель для умывания</h2>
           <div class="card__description">
@@ -80,7 +88,7 @@
           </div>
         </li>
         <li class="products__item card">
-          <img src="img/photo 4.png" alt="Product 4" class="card__image" />
+          <img src="img/photo_4.png" alt="Product 4" class="card__image" />
           <span class="card__remark">для нормальной кожи</span>
           <h2 class="card__name">Подарочный набор №1</h2>
           <div class="card__description">
@@ -100,7 +108,7 @@
           </div>
         </li>
         <li class="products__item card">
-          <img src="img/photo 5.png" alt="Product 5" class="card__image" />
+          <img src="img/photo_5.png" alt="Product 5" class="card__image" />
           <span class="card__remark">для нормальной кожи</span>
           <h2 class="card__name">Подарочный набор №5</h2>
           <div class="card__description">
@@ -122,5 +130,6 @@
       </ul>
     </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
