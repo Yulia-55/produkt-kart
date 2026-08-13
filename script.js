@@ -43,3 +43,4 @@ const changeColorBackgroundButton = document.querySelector('#change-color-backgr
 changeColorBackgroundButton.addEventListener('click', () => {
   changeColorBackgroundButton.classList.toggle('active');
 })
+
