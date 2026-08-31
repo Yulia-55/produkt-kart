@@ -75,3 +75,26 @@ Object.entries() - массив состоящий из массивов [клю
 3. array.unshift(1,3) - добавляет элементы в начало массива
 4. array.shift() - удаляет первый элемент
 
+
+----- Л Е К Ц И Я   9 -----
+
+Методы:
+1. изменяют массив
+2. возвращают новый
+
+Funcsion declarasion - объявленные при помощи ключевого слова funcsion
+funcsion calc(number) = {
+  return number * 2
+}
+
+Funcsion expression - все необъявленные функции
+const calc = (number) => number * 2
+
+Callback - функция, переданная аргументом в другую функцию
+const newArray = numbers.map(number => number * 2)
+здесь number => number * 2 - Callback
+
+map(value, index, array) по умолчанию map иеет три параметра
+value - элемент массива
+index - его индекс
+array - имя массива
