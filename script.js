@@ -36,10 +36,10 @@ function outputConsoleLog(message) {
 const title = document.querySelector('.catalog__title');
 
 title.addEventListener('mouseover', () => {
-    console.log(title.textContent);
+  console.log(title.textContent);
 });
 
 const changeColorBackgroundButton = document.querySelector('#change-color-background-button');
 changeColorBackgroundButton.addEventListener('click', () => {
   changeColorBackgroundButton.classList.toggle('active');
-})
+});
