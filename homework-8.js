@@ -1,5 +1,5 @@
 // Homework 7.3
-const dataPerson = {
+const personData = {
   name: 'Юлия',
   surname: 'Кривошея',
   age: 55,
@@ -7,100 +7,121 @@ const dataPerson = {
   cityResidence: 'Борова',
   cityBirth: 'Киев',
   education: 'Высшее'
-}
-console.log(Object.entries(dataPerson))
+};
+console.log(Object.entries(personData));
 
 // Homework 7.4
-const descripsionVehicle = {
+const vehicleDescription = {
   brand: 'Toyota',
   model: 'Camry',
   year: 2020,
   color: 'Black',
   carTransmission: 'Automatic'
-}
-descripsionVehicle.owner = dataPerson
-console.log(descripsionVehicle)
+};
+vehicleDescription.owner = personData;
+console.log(vehicleDescription);
 
 // Homework 7.5
-const addMaxSpeed = (descripsionVehicle, maxSpeed) => {
-  const arrayKeys = Object.keys(descripsionVehicle)
+const addMaxSpeed = (vehicleDescription, maxSpeed) => {
+  const arrayKeys = Object.keys(vehicleDescription)
   if (arrayKeys.includes('maxSpeed')) {
     return
   } else {
-    descripsionVehicle.maxSpeed = maxSpeed
+    vehicleDescription.maxSpeed = maxSpeed
   }
-}
-addMaxSpeed(descripsionVehicle, 250)
-console.log(descripsionVehicle)
+};
+addMaxSpeed(vehicleDescription, 250);
+console.log(vehicleDescription);
+
+// Homework 7.5 мethod 2
+const addMaxSpeed1= (vehicleDescription, maxSpeed) => {
+  if (!Object.hasOwn(vehicleDescription, 'maxSpeed')) {
+    vehicleDescription.maxSpeed = maxSpeed;
+  }
+};
+addMaxSpeed1(vehicleDescription, 250);
+console.log(vehicleDescription);
 
 // Homework 7.6
 const showObjectValues = (object, key) => {
   console.log(object[key])
-}
-showObjectValues(descripsionVehicle, 'brand')
+};
+showObjectValues(vehicleDescription, 'brand');
 
 // Homework 7.7
-const listProducts = [ 'Молоко', 'Хлеб', 'Сыр', 'Яйца', 'Масло' ]
-console.log(listProducts)
+const productList = [ 'Молоко', 'Хлеб', 'Сыр', 'Яйца', 'Масло' ]
+console.log(productList);
 
 // Homework 7.8
-const listDogBreeds = [
-  { breed: 'Бордер колли',
+const dogBreedList = [
+  { 
+    breed: 'Бордер колли',
     country: 'Великобритания',
     groupFci: 1,
     intendedUse: 'Пастушья собака',
-    size: 'Средняя'},
-  { breed: 'Американский стаффордширский терьер',
+    size: 'Средняя'
+  },
+  { 
+    breed: 'Американский стаффордширский терьер',
     country: 'США',
     groupFci: 3,
     intendedUse: 'Служебная собака',
-    size: 'Средняя'},
-  { breed: 'Аляскинский маламут',
+    size: 'Средняя'
+  },
+  { 
+    breed: 'Аляскинский маламут',
     country: 'США',
     groupFci: 5,
     intendedUse: 'Ездовая собака',
-    size: 'Крупная'}  
-]
+    size: 'Крупная'
+  }  
+];
 const akita = {
   breed: 'Американская акита',
   country: 'США',
   groupFci: 5,
   intendedUse: 'Охотничья собака',
   size: 'Крупная'
-}
-listDogBreeds.push(akita)
-console.log(listDogBreeds)
+};
+dogBreedList.push(akita);
+console.log(dogBreedList);
 
 // Homework 7.9
-const listDogSecurity = [
-  { breed: 'Немецкая овчарка',
+const serviceDogList = [
+  { 
+    breed: 'Немецкая овчарка',
     country: 'Германия',
     groupFci: 1,
     intendedUse: 'Служебная собака',
-    size: 'Крупная'},
-  { breed: 'Русский черный терьер',
+    size: 'Крупная'
+  },
+  { 
+    breed: 'Русский черный терьер',
     country: 'Россия',
     groupFci: 2,
     intendedUse: 'Служебная собака',
-    size: 'Крупная'},
-  { breed: 'Бельгийская овчарка',
+    size: 'Крупная'
+  },
+  { 
+    breed: 'Бельгийская овчарка',
     country: 'Бельгия',
     groupFci: 1,
     intendedUse: 'Служебная собака',
-    size: 'Крупная'}  
+    size: 'Крупная'
+  }  
 ]
 
-const newListDogBreeds = [ ...listDogBreeds, ...listDogSecurity ]
-console.log(newListDogBreeds)
+const newdogBreedList = [ ...dogBreedList, ...serviceDogList ]
+console.log(newdogBreedList)
 
 // Homework 7.10
-const listDogBreeds2 = newListDogBreeds.map(dog => ({
+const dogBreedList2 = newdogBreedList.map(dog => ({
   ...dog,
   breedSelect: dog.groupFci === 5
   ? 'Примитивная порода'
   : 'Искусственно выведенная порода'
 }))
 
-console.log(listDogBreeds2)
+console.log(dogBreedList2)
 
 
