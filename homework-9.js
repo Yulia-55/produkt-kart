@@ -18,9 +18,11 @@ const dogBreedList = [
 ];
 
 const checkBreed = (breed) => {
-  dogBreedList.includes(breed)
-    ? console.log(`Порода ${breed} есть в списке`)
-    : console.log(`Порода ${breed} отсутствует в списке`);
+  if (dogBreedList.includes(breed)) {
+    console.log(`Порода ${breed} есть в списке`);
+  } else {
+    console.log(`Порода ${breed} отсутствует в списке`);
+  }
 };
 checkBreed('Американская акита');
 
@@ -45,10 +47,8 @@ console.log(commentsWithComEmail);
 // 9.8 - создание массива с измененным postId
 const commentsWithNewPostId = commentsNetworkSocial.map(comment => ({
   ...comment,
-  postId: comment.id > 5
-  ?  1
-  :  2
-}))
+  postId: comment.id > 5 ? 1 : 2
+}));
 console.log(commentsWithNewPostId);
 
 // 9.9 - создание массива, объекты которого состоят 
@@ -62,9 +62,7 @@ console.log(commentsNetworkSocialIdName);
 // 9.10 - добавление нового свойства в объекты массива
 const commentsNetworkSocialWithIsInvalid =commentsNetworkSocial.map(comment => ({
   ...comment,
-  isInvalid: comment.body.length > 180
-  ? true
-  : false
+  isInvalid: comment.body.length > 180 ? true : false
 }));
 console.log(commentsNetworkSocialWithIsInvalid);
 
