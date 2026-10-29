@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="style/composition.css">
   <link rel="stylesheet" href="style/card.css">
   <link rel="stylesheet" href="style/products.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/modal.css">
 </head>
 <body>
   <main class="catalog">
@@ -49,9 +51,100 @@
       </ul>
     </div>
   </main>
+  <footer class="footer">
+    <div class="footer__content ">
+      <div class="footer__about">
+        <h2 class="footer__title">Product Cards</h2>
+        <p class="footer__description">У нас самые лучшие продукты для кожи!</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Telegram">
+            <img src="img/telegram.png" alt="">
+          </a>
+          <a href="#" aria-label="VK">
+            <img src="img/vk.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="footer-form">
+        <p class="footer-form__label">Подпишись на наши акции:</p>
+        <form class="footer-form__form">
+          <input type="email" class="footer-form__input" placeholder="Введи Email..." required />
+          <button type="submit" class="footer-form__button">Подписаться</button>
+        </form>
+        <button class="footer-form__modal">Регистрация</button>
+        <hr class="footer-form__line">
+        <a href="#" class="footer-form__copyright">www.product-cards.com©all right reserve</a>
+      </div>
+      <nav class="footer-navigation">
+        <p class="navigation__label">Быстрые ссылки</p>
+        <ul class="navigation__list">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>            
+    </div>        
+  </footer>
+  <div class="modal-showed">    
+    <div class="modal-showed__content">
+      <a href="#" class="modal-showed__close" aria-label="X">x</a>
+      <form class="modal-showed__registration">
+        <label for="first-name" class="modal-showed__label">Ваше имя:</label>
+        <input
+          type="text"
+          id="first-name"
+          class="modal-showed__input"
+          placeholder="Имя"
+          required
+        />
+        <label for="last-name" class="modal-showed__label">Ваша фамилия:</label>
+        <input
+          type="text"
+          id="last-name"
+          class="modal-showed__input"
+          placeholder="Фамилия"
+          required
+        />
+        <label for="birth-date" class="modal-showed__label">Дата рождения:</label>
+        <input
+          type="date"
+          id="birth-date"
+          class="modal-showed__input"
+          placeholder="Дата рождения"
+          required
+        />
+        <label for="login" class="modal-showed__label">Введите логин:</label>
+        <input
+          type="text"
+          id="login"
+          class="modal-showed__input"
+          placeholder="Логин"
+          required
+        />
+        <label for="password" class="modal-showed__label">Введите пароль:</label>
+        <input
+          type="password"
+          id="password"
+          class="modal-showed__input"
+          placeholder="Пароль"
+          required
+        />
+        <label for="confirm-password" class="modal-showed__label">Подтвердите пароль:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          class="modal-showed__input"
+          placeholder="Пароль"
+          required
+        />
+        <button type="submit" class="modal-showed__button">Зарегистрироваться</button>
+      </form>
+    </div>    
+  </div>  
   <script src="script.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
+  <script src="homework-11.js"></script>
   <script type="module" src="homework-10.js"></script>
   <script type="module" src="homework-9.js"></script> 
 </body>
